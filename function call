@@ -1,0 +1,9 @@
+def IAmDecorator(fun):
+    def wrapper(*args, **kw):
+        print("我真的是一个装饰器")
+        return fun
+    return wrapper
+@IAmDecorator
+def func(h):
+    print("我是原函数")
+func()
